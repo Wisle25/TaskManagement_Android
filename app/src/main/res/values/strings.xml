@@ -13,4 +13,8 @@
     <string name="taskdescription">\t\t\t Task Description</string>
     <string name="task_date">\t\t\t  Pick the Date</string>
     <string name="task_time">\t\t\t  Pick the Time</string>
+    <string name="welcomepage">Welcome To TaskPixie!</string>
+    <string name="descapp">Welcome to TaskPixie, the enchanting task manager designed to bring a touch of magic to your everyday productivity</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
 </resources>
