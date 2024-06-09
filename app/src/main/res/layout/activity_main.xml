@@ -26,7 +26,7 @@
         android:textStyle="bold"
         android:fontFamily="@font/poppins_bold"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_marginTop="20dp"
         />
     <TextView
@@ -37,11 +37,11 @@
         android:text="@string/descapp"
         android:textColor="@color/white"
         android:textAlignment="center"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:fontFamily="@font/poppins_medium"
         android:layout_marginTop="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEndt="20dp"
         />
 
     <android.widget.Button
@@ -54,7 +54,7 @@
         android:fontFamily="@font/open_sans_bold"
         android:text="@string/login"
         android:textColor="@color/blue1"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_centerHorizontal="true"
@@ -73,7 +73,7 @@
         android:fontFamily="@font/open_sans_bold"
         android:text="@string/register"
         android:textColor="@color/blue1"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_centerHorizontal="true"
