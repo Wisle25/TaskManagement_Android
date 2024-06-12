@@ -17,4 +17,5 @@
     <string name="descapp">Welcome to TaskPixie, the enchanting task manager designed to bring a touch of magic to your everyday productivity</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="userprofile">User Profile</string>
 </resources>
