@@ -96,6 +96,7 @@
         android:fontFamily="@font/poppins_medium"
         android:textColor="@color/blue1"
         android:textSize="12sp"
+        android:id="@+id/txtRegister"
         />
     </LinearLayout>
 
