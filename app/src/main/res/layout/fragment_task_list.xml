@@ -105,7 +105,7 @@
                 android:drawableTint="@color/white"
                 android:fontFamily="@font/poppins_medium"
                 android:padding="10dp"
-                android:text="@string/priority"
+                android:text="@string/high"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
@@ -121,7 +121,7 @@
                 android:drawableTint="@color/white"
                 android:fontFamily="@font/poppins_medium"
                 android:padding="10dp"
-                android:text="@string/todo"
+                android:text="@string/low"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
@@ -136,7 +136,7 @@
                 android:drawableTint="@color/white"
                 android:fontFamily="@font/poppins_medium"
                 android:padding="10dp"
-                android:text="@string/meeting"
+                android:text="@string/urgent"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
