@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SlashScreenFragment">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@drawable/gradient_bg">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="230dp"
+            android:layout_height="226dp"
+            android:src="@drawable/logoapp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            />
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_below="@+id/img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcomepage"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:id="@+id/descapp"
+            android:layout_below="@+id/textWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descapp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
+            />
+
+        <android.widget.Button
+            android:id="@+id/loginbtn"
+            android:layout_width="330dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/white_button"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/login"
+            android:textColor="@color/blue1"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@+id/descapp"
+            app:layout_constraintVertical_bias="0.144" />
+
+        <android.widget.Button
+            android:id="@+id/registerbtn"
+            android:layout_width="330dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/white_button"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/register"
+            android:textColor="@color/blue1"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@+id/loginbtn"
+            app:layout_constraintVertical_bias="0.144" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
