@@ -51,4 +51,15 @@
     <string name="updated_at">Updated At</string>
     <string name="created_at">Created At</string>
     <string name="your_task1">Your Task</string>
+    <string name="hello">Hello!</string>
+    <string name="input_username">Enter Your Username</string>
+    <string name="input_email">Enter Your Email</string>
+    <string name="input_password">Enter Password</string>
+    <string name="input_confirm_password">Confirm Password</string>
+    <string name="redirect_login">Have an account?</string>
+    <string name="link_login">Login</string>
+    <string name="input_identity">Enter your username/email</string>
+    <string name="redirect_register">Don\'t have acount?</string>
+    <string name="link_register">Register</string>
+    <string name="deadline">Task Deadline</string>
 </resources>
