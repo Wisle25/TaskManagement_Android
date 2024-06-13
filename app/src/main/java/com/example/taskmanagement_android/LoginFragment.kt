@@ -1,44 +1,72 @@
 package com.example.taskmanagement_android
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.taskmanagement_android.databinding.FragmentLoginBinding
+import com.example.taskmanagement_android.http.RetrofitInstance
+import com.example.taskmanagement_android.model.LoginRequest
+import com.example.taskmanagement_android.model.LoginResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class LoginFragment : Fragment() {
-    private lateinit var txtRegister: TextView
+
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_login, container, false)
+    ): View {
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        // Enable edge to edge
-        requireActivity().enableEdgeToEdge()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-//        // Apply window insets listener
-//        ViewCompat.setOnApplyWindowInsetsListener(view.findViewById(R.id.main)) { v, insets ->
-//            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-//            insets
-//        }
+        binding.loginBtn.setOnClickListener {
+            val identity = binding.inputIdentity.text.toString()
+            val password = binding.inputPassword.text.toString()
 
-        // Initialize and set click listener for txtRegister
-        txtRegister = view.findViewById(R.id.txtRegister)
-        txtRegister.setOnClickListener {
-            Log.d("LoginFragment", "Login button clicked")
-            startActivity(Intent(requireContext(), RegisterFragment::class.java))
+            if (identity.isNotBlank() && password.isNotBlank()) {
+                loginUser(identity, password)
+            } else {
+                Toast.makeText(requireContext(), "All fields are required", Toast.LENGTH_SHORT).show()
+            }
         }
 
-        return view
+        binding.txtRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
+    }
+
+    private fun loginUser(identity: String, password: String) {
+        val request = LoginRequest(identity, password)
+        RetrofitInstance.api.loginUser(request).enqueue(object : Callback<LoginResponse> {
+            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                if (response.isSuccessful && response.body()?.status == "success") {
+                    Toast.makeText(requireContext(), response.body()?.message ?: "Login successful", Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(R.id.action_loginFragment_to_taskListFragment)
+                } else {
+                    Toast.makeText(requireContext(), response.body()?.message ?: "Login failed", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                Toast.makeText(requireContext(), "An error occurred: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
