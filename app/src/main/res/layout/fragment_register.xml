@@ -90,7 +90,7 @@
     </LinearLayout>
 
     <android.widget.Button
-        android:id="@+id/registerbtn"
+        android:id="@+id/registerBtn"
         android:layout_width="284dp"
         android:layout_height="48dp"
         android:layout_marginStart="66dp"
@@ -111,7 +111,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/registerbtn"
+        android:layout_below="@+id/registerBtn"
         android:gravity="center">
 
         <TextView

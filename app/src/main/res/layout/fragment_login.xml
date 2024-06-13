@@ -62,7 +62,7 @@
         </LinearLayout>
 
         <android.widget.Button
-            android:id="@+id/loginbtn"
+            android:id="@+id/loginBtn"
             android:layout_width="330dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/loginbtn"
+            android:layout_below="@+id/loginBtn"
             android:gravity="center">
 
             <TextView

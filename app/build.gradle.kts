@@ -35,7 +35,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures{
-        viewBinding=true;
+        viewBinding = true;
     }
 }
 
@@ -46,9 +46,12 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("androidx.security:security-crypto:1.1.0-alpha03")
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
 }
