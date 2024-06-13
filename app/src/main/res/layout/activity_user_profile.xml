@@ -11,7 +11,7 @@
         android:id="@+id/Profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:text="Profile"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -19,22 +19,22 @@
         android:textStyle="bold"
         android:fontFamily="@font/poppins_bold" />
 
-    <ImageView
-        android:id="@+id/img_userprofile"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_below="@id/Profile"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/userprofile"
-        android:scaleType="centerCrop"
-        android:background="@drawable/circle_shape" />
+<!--    <ImageView-->
+<!--        android:id="@+id/img_userprofile"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_below="@id/Profile"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:src="@drawable/userprofile"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:background="@drawable/circle_shape" />-->
 
     <LinearLayout
         android:id="@+id/userprofile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/img_userprofile"
+        android:layout_below="@id/Profile"
         android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:padding="15dp"
@@ -111,6 +111,25 @@
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_below="@+id/userprofile"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <android.widget.Button
+        android:id="@+id/updatebtn"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bluegradient_button"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/updateProfil"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@+id/backtohomebtn"
         app:layout_constraintVertical_bias="0.144" />
 
 </RelativeLayout>
