@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
         <Button
             android:id="@+id/back_button"
@@ -16,30 +17,26 @@
             android:layout_height="44dp"
             android:backgroundTint="@color/white"
             android:drawableEnd="@drawable/icon_back"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.036"
+            app:layout_constraintHorizontal_bias="0.046"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.023" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/title_updatetask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/open_sans_bold"
+            android:fontFamily="@font/poppins_bold"
             android:text="@string/updatetask"
             android:textSize="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/add_task_form"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintHorizontal_bias="0.07"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.11" />
+            app:layout_constraintTop_toBottomOf="@id/back_button" />
 
-        <!--Task Name-->
         <TextView
-            android:id="@+id/desc_detailtask"
+            android:id="@+id/desc_updatetask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_bold"
@@ -53,108 +50,100 @@
             app:layout_constraintTop_toBottomOf="@id/title_updatetask"
             app:layout_constraintVertical_bias="0.0" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/task_name"
-            android:layout_width="0dp"
+        <!-- Add Task Form -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/desc_detailtask"
-            android:layout_marginTop="16dp"
-            app:startIconDrawable="@drawable/icon_name">
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/desc_updatetask">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_name"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:hint="@string/taskname"
-                android:inputType="textPersonName"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:hint="@string/input_title">
 
-        <!-- Task Description -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/task_description"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/task_name"
-            android:layout_marginTop="16dp"
-            app:startIconDrawable="@drawable/icon_description">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/icon_name"
+                    android:drawableEnd="@drawable/icon_clear"
+                    android:drawablePadding="10dp"
+                    android:inputType="text" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_description"
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:hint="@string/taskdescription"
-                android:inputType="textPersonName"
-                android:maxLines="1" />
+                android:layout_height="wrap_content"
+                android:hint="@string/input_description">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/icon_description"
+                    android:drawableEnd="@drawable/icon_clear"
+                    android:drawablePadding="10dp"
+                    android:inputType="text" />
 
-        <!-- Task Date -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/task_date"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/task_description"
-            android:layout_marginTop="16dp"
-            app:startIconDrawable="@drawable/icon_date">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_date"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:hint="@string/task_date"
-                android:inputType="textPersonName"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:hint="@string/input_priority"
+                android:layout_marginVertical="10dp">
 
-        <!-- Task Time -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/task_time"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/task_date"
-            android:layout_marginTop="16dp"
-            app:startIconDrawable="@drawable/icon_time">
+                <AutoCompleteTextView
+                    android:id="@+id/input_priority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/icon_priority2"
+                    android:drawablePadding="10dp"
+                    android:inputType="none" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_time"
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:hint="@string/task_time"
-                android:inputType="textPersonName"
-                android:maxLines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:hint="@string/input_due_date"
+                android:layout_marginVertical="10dp">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_due_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/icon_date"
+                    android:drawableEnd="@drawable/icon_clear"
+                    android:drawablePadding="10dp"
+                    android:inputType="datetime" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:fontFamily="@font/open_sans_bold"
             android:text="@string/choosestatus"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.101"
+            app:layout_constraintHorizontal_bias="0.062"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.638" />
+            app:layout_constraintVertical_bias="0.698" />
 
         <LinearLayout
             android:id="@+id/rb_status"
@@ -163,6 +152,7 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/status"
             app:layout_constraintVertical_bias="0.0">
@@ -212,30 +202,10 @@
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rb_status"
-            app:layout_constraintVertical_bias="0.142" />
-
-        <android.widget.Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="330dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="80dp"
-            android:background="@drawable/redgradient_button"
-            android:fontFamily="@font/open_sans_bold"
-            android:text="@string/cancel"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_update_task"
-            app:layout_constraintVertical_bias="0.144" />
-
+            app:layout_constraintVertical_bias="0.367" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -47,6 +47,10 @@
     <string name="svaeupdate">Save Update</string>
     <string name="desc_updatetask">Update your task!</string>
     <string name="choosestatus">Choose task status!</string>
+    <string name="task_priority">Task Priority</string>
+    <string name="updated_at">Updated At</string>
+    <string name="created_at">Created At</string>
+    <string name="your_task1">Your Task</string>
     <string name="hello">Hello!</string>
     <string name="input_username">Enter Your Username</string>
     <string name="input_email">Enter Your Email</string>
@@ -61,4 +65,5 @@
     <string name="task_pending">Pending</string>
     <string name="profile">Profile</string>
     <string name="progress">On Progress</string>
+    <string name="deadline">Task Deadline</string>
 </resources>
