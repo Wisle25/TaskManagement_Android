@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfileFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/Profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Profile"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold" />
+
+        <LinearLayout
+            android:id="@+id/userprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Profile"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:gravity="start"
+            android:background="@drawable/shape_input">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shawn Mendes"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/user_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surakarta, Indonesia"
+                android:drawableLeft="@drawable/baseline_add_location_alt_24"
+                android:drawablePadding="8dp"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/black"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+628123456789"
+                android:drawableLeft="@drawable/baseline_add_call_24"
+                android:drawablePadding="8dp"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/black"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="shawnmendes@gmail.com"
+                android:drawableLeft="@drawable/baseline_attach_email_24"
+                android:drawablePadding="8dp"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/black"
+                android:gravity="start" />
+        </LinearLayout>
+
+        <android.widget.Button
+            android:id="@+id/backtohomebtn"
+            android:layout_width="330dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bluegradient_button"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Back To Home"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@+id/userprofile"
+            app:layout_constraintVertical_bias="0.144" />
+
+        <android.widget.Button
+            android:id="@+id/updatebtn"
+            android:layout_width="330dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bluegradient_button"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/updateProfil"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@+id/backtohomebtn"
+            app:layout_constraintVertical_bias="0.144" />
+
+    </RelativeLayout>
+
+</FrameLayout>
