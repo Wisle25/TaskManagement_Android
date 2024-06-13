@@ -42,4 +42,8 @@
     <string name="input_priority">Priority</string>
     <string name="input_due_date">Due Date</string>
     <string name="add_task">Add Task</string>
+    <string name="pickdate">Pick Date</string>
+    <string name="cancel">Cancel</string>
+    <string name="svaeupdate">Save Update</string>
+    <string name="desc_updatetask">Update your task!</string>
 </resources>
