@@ -1,32 +1,38 @@
 package com.example.taskmanagement_android
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.example.taskmanagement_android.R
 
-/**
- * A simple [Fragment] subclass.
- * Use the [AddTaskFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AddTaskFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private lateinit var inputPriority: AutoCompleteTextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_task, container, false)
-    }
+        val view = inflater.inflate(R.layout.fragment_add_task, container, false)
 
+        // Initialize AutoCompleteTextView and set up the adapter
+        inputPriority = view.findViewById(R.id.input_priority)
+        val items = listOf("High", "Low", "Urgent")
+        val adapter = ArrayAdapter(requireContext(), R.layout.list_priority, items)
+        inputPriority.setAdapter(adapter)
+
+        // Set up item click listener
+        inputPriority.setOnItemClickListener { parent, _, position, _ ->
+            val item = parent.getItemAtPosition(position).toString()
+            Toast.makeText(requireContext(), "Priority: $item", Toast.LENGTH_SHORT).show()
+        }
+
+        return view
+    }
 }

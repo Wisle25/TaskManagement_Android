@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">TaskManagement_Android</string>
-    <string name="status">Choose the status</string>
+    <string name="status">Task Status</string>
     <string name="pending">Pending</string>
-    <string name="inprogres">In Progres</string>
+    <string name="inprogres">In Progress</string>
     <string name="done">Done</string>
     <string name="updatetask">Update Task</string>
     <string name="delete">Delete</string>
     <string name="backtohome">Back To Home</string>
     <string name="detailtask">Detail Task</string>
-    <string name="desc_detailtask">Update your progress!</string>
+    <string name="desc_detailtask">Check your task!</string>
     <string name="taskname">\t\t\t Your Task</string>
     <string name="taskdescription">\t\t\t Task Description</string>
     <string name="task_date">\t\t\t  Pick the Date</string>
@@ -26,9 +26,9 @@
     <string name="user_avatar">user avatar</string>
     <string name="pick_date">Pick Date</string>
     <string name="date_hint">2024-04-07</string>
-    <string name="priority">Priority\n0</string>
-    <string name="todo">Todo\n0</string>
-    <string name="meeting">Meeting\n0</string>
+    <string name="high">High\n0</string>
+    <string name="low">Low\n0</string>
+    <string name="urgent">Urgent\n0</string>
     <string name="your_task">Your Task</string>
     <string name="task_logo">Task Logo</string>
     <string name="task_title">Task Title</string>
@@ -46,4 +46,5 @@
     <string name="cancel">Cancel</string>
     <string name="svaeupdate">Save Update</string>
     <string name="desc_updatetask">Update your task!</string>
+    <string name="choosestatus">Choose task status!</string>
 </resources>
