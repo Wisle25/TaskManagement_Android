@@ -16,6 +16,8 @@ class UserPreferences(private val context: Context) {
     companion object {
         val IS_LOGGED_IN = booleanPreferencesKey("is_logged_in")
         val USER_TOKEN = stringPreferencesKey("user_token")
+        val USERNAME = stringPreferencesKey("username")
+        val PASSWORD = stringPreferencesKey("password")
     }
 
     private val securePreferences = SecurePreferences(context)
@@ -39,6 +41,28 @@ class UserPreferences(private val context: Context) {
     suspend fun setUserToken(token: String) {
         context.dataStore.edit { preferences ->
             preferences[USER_TOKEN] = token
+        }
+    }
+
+    val username: Flow<String?> = context.dataStore.data
+        .map { preferences ->
+            preferences[USERNAME]
+        }
+
+    suspend fun setUsername(username: String) {
+        context.dataStore.edit { preferences ->
+            preferences[USERNAME] = username
+        }
+    }
+
+    val password: Flow<String?> = context.dataStore.data
+        .map { preferences ->
+            preferences[PASSWORD]
+        }
+
+    suspend fun setPassword(password: String) {
+        context.dataStore.edit { preferences ->
+            preferences[PASSWORD] = password
         }
     }
 
