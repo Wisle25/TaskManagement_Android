@@ -47,4 +47,11 @@
     <string name="svaeupdate">Save Update</string>
     <string name="desc_updatetask">Update your task!</string>
     <string name="choosestatus">Choose task status!</string>
+    <string name="hello">Hello!</string>
+    <string name="input_username">Enter Your Username</string>
+    <string name="input_email">Enter Your Email</string>
+    <string name="input_password">Create Password</string>
+    <string name="input_confirm_password">Confirm Password</string>
+    <string name="redirect_login">Have an account?</string>
+    <string name="link_login">Login</string>
 </resources>

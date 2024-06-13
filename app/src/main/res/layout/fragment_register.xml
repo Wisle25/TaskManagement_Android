@@ -1,38 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterFragment">
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
     <TextView
         android:id="@+id/textHello"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello!"
-        android:textColor="@color/blue1"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins_bold"
-        android:textAlignment="center"
-        android:textSize="40sp"
         android:layout_marginTop="30dp"
-        />
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/hello"
+        android:textAlignment="center"
+        android:textColor="@color/blue1"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/img_logo"
         android:layout_width="230dp"
         android:layout_height="226dp"
-        android:src="@drawable/logoapp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/textHello"
-        />
+        android:layout_centerHorizontal="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/logoapp" />
 
     <LinearLayout
         android:id="@+id/input_Register"
@@ -47,44 +40,48 @@
         android:gravity="center">
 
         <EditText
-            android:id="@+id/input_nameRegister"
+            android:id="@+id/input_username"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/shape_input"
-            android:hint="Enter Your Full Name"
-            android:paddingLeft="15dp"
+            android:hint="@string/input_username"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/input_emailRegister"
+            android:id="@+id/input_email"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/shape_input"
-            android:hint="Enter Your Email"
-            android:paddingLeft="15dp"
+            android:hint="@string/input_email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/input_createpwRegister"
+            android:id="@+id/input_password"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/shape_input"
-            android:hint="Create Password"
-            android:paddingLeft="15dp"
+            android:hint="@string/input_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/input_confirmpwRegister"
+            android:id="@+id/input_confirm_password"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:background="@drawable/shape_input"
-            android:hint="Confirm Password"
-            android:paddingLeft="15dp"
+            android:hint="@string/input_confirm_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
             android:textAlignment="center" />
 
     </LinearLayout>
@@ -117,20 +114,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Have an account?"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="12sp"/>
+            android:text="@string/redirect_login"
+            android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/link_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Login"
             android:fontFamily="@font/poppins_medium"
+            android:text="@string/link_login"
             android:textColor="@color/blue1"
-            android:textSize="12sp"
-            android:id="@+id/txtLogin"
-            />
+            android:textSize="12sp" />
     </LinearLayout>
-    </RelativeLayout>
 
-</FrameLayout>
+</RelativeLayout>
