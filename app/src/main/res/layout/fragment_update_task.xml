@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.taskmanagement_android.DetailTaskFragment">
+    tools:context=".UpdateTaskFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -25,11 +24,11 @@
             app:layout_constraintVertical_bias="0.023" />
 
         <TextView
-            android:id="@+id/title_detailtask"
+            android:id="@+id/title_updatetask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_bold"
-            android:text="@string/detailtask"
+            android:text="@string/updatetask"
             android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,14 +43,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_bold"
-            android:text="@string/desc_detailtask"
+            android:text="@string/desc_updatetask"
             android:textColor="@color/blue1"
             android:textSize="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.059"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title_detailtask"
+            app:layout_constraintTop_toBottomOf="@id/title_updatetask"
             app:layout_constraintVertical_bias="0.0" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -97,8 +96,6 @@
                 android:maxLines="1" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-
 
         <!-- Task Date -->
         <com.google.android.material.textfield.TextInputLayout
@@ -203,14 +200,14 @@
         </LinearLayout>
 
         <android.widget.Button
-            android:id="@+id/btn_update_task"
+            android:id="@+id/btn_save_update_"
             android:layout_width="330dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/bluegradient_button"
             android:fontFamily="@font/open_sans_bold"
-            android:text="@string/updatetask"
+            android:text="@string/svaeupdate"
             android:textColor="@color/white"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -218,17 +215,18 @@
             app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rb_status"
-            app:layout_constraintVertical_bias="0.076" />
+            app:layout_constraintVertical_bias="0.142" />
 
         <android.widget.Button
-            android:id="@+id/btn_delete"
+            android:id="@+id/btn_cancel"
             android:layout_width="330dp"
             android:layout_height="45dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="80dp"
             android:background="@drawable/redgradient_button"
             android:fontFamily="@font/open_sans_bold"
-            android:text="@string/delete"
+            android:text="@string/cancel"
             android:textColor="@color/white"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -238,25 +236,6 @@
             app:layout_constraintTop_toBottomOf="@id/btn_update_task"
             app:layout_constraintVertical_bias="0.144" />
 
-        <android.widget.Button
-            android:id="@+id/btn_backtohome"
-            android:layout_width="330dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/bluegradient_button"
-            android:fontFamily="@font/open_sans_bold"
-            android:text="@string/backtohome"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_delete"
-            app:layout_constraintVertical_bias="0.26" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </FrameLayout>

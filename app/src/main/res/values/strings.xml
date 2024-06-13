@@ -8,7 +8,7 @@
     <string name="delete">Delete</string>
     <string name="backtohome">Back To Home</string>
     <string name="detailtask">Detail Task</string>
-    <string name="desc_detailtask">Update your progress!</string>
+    <string name="desc_detailtask">Check your task!</string>
     <string name="taskname">\t\t\t Your Task</string>
     <string name="taskdescription">\t\t\t Task Description</string>
     <string name="task_date">\t\t\t  Pick the Date</string>
@@ -22,4 +22,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="pickdate">Pick Date</string>
+    <string name="cancel">Cancel</string>
+    <string name="svaeupdate">Save Update</string>
+    <string name="desc_updatetask">Update your task!</string>
 </resources>
