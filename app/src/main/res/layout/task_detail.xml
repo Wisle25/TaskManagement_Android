@@ -114,7 +114,9 @@
             android:hint="@string/task_date"
             android:inputType="textPersonName"
             android:maxLines="1" />
+
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <!-- Task Time -->
     <com.google.android.material.textfield.TextInputLayout
