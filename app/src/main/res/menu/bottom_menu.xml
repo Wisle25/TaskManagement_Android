@@ -2,28 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
-        android:title="Home"
+        android:id="@+id/taskListFragment"
+        android:title="@string/task_list"
         android:icon="@drawable/icon_home"/>
 
     <item
-        android:id="@+id/progres"
-        android:title="Progress"
+        android:id="@+id/pendingFragment"
+        android:title="@string/task_pending"
         android:icon="@drawable/icon_hourglass"/>
 
     <item
-        android:id="@+id/addtask"
-        android:title=" "
+        android:id="@+id/addTaskFragment"
+        android:title="@string/add_task"
         android:enabled="false"/>
 
     <item
-        android:id="@+id/done"
-        android:title="Done"
+        android:id="@+id/progressFragment"
+        android:title="@string/progress"
         android:icon="@drawable/icon_done"/>
 
     <item
-        android:id="@+id/profile"
-        android:title="Profile"
+        android:id="@+id/profileFragment"
+        android:title="@string/profile"
         android:icon="@drawable/icon_profile"/>
 
 </menu>

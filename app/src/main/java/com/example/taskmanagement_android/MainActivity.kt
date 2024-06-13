@@ -30,10 +30,13 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.welcomeFragment,
                 R.id.loginFragment,
-                R.id.registerFragment -> hideBottomNav()
+                R.id.registerFragment,
+                R.id.addTaskFragment -> hideBottomNav()
                 else -> showBottomNav()
             }
         }
+
+        setupBottomNav()
     }
 
     private fun hideBottomNav() {
@@ -50,5 +53,25 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
+    private fun setupBottomNav() {
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.taskListFragment -> {
+                    navController.navigate(R.id.taskListFragment)
+                    true
+                }
+                R.id.addTaskFragment -> {
+                    navController.navigate(R.id.addTaskFragment)
+                    true
+                }
+                else -> false
+            }
+        }
+
+        bottomFab.setOnClickListener {
+            navController.navigate(R.id.addTaskFragment)
+        }
     }
 }
