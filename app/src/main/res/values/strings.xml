@@ -47,4 +47,8 @@
     <string name="svaeupdate">Save Update</string>
     <string name="desc_updatetask">Update your task!</string>
     <string name="choosestatus">Choose task status!</string>
+    <string name="task_priority">Task Priority</string>
+    <string name="updated_at">Updated At</string>
+    <string name="created_at">Created At</string>
+    <string name="your_task1">Your Task</string>
 </resources>
