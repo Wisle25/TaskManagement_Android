@@ -21,4 +21,25 @@
     <string name="updateProfil">Update</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_user">Welcome, User!</string>
+    <string name="have_a_nice_day">Have a nice day!</string>
+    <string name="user_avatar">user avatar</string>
+    <string name="pick_date">Pick Date</string>
+    <string name="date_hint">2024-04-07</string>
+    <string name="priority">Priority\n0</string>
+    <string name="todo">Todo\n0</string>
+    <string name="meeting">Meeting\n0</string>
+    <string name="your_task">Your Task</string>
+    <string name="task_logo">Task Logo</string>
+    <string name="task_title">Task Title</string>
+    <string name="task_description">Description</string>
+    <string name="task_status">status</string>
+    <string name="create_your_task">Create Your Task</string>
+    <string name="create_tips">Let\'s create your own task to remember!</string>
+    <string name="input_title">Title</string>
+    <string name="input_description">Description</string>
+    <string name="input_status">Status</string>
+    <string name="input_priority">Priority</string>
+    <string name="input_due_date">Due Date</string>
+    <string name="add_task">Add Task</string>
 </resources>

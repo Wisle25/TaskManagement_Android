@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".TaskListFragment">
+
+    <!-- User Welcome -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="264dp"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/welcomeUserTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/welcome_user"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/have_a_nice_day"
+                    android:textColor="@color/blue1" />
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/user_avatar"
+                tools:src="@tools:sample/avatars" />
+        </LinearLayout>
+
+        <!-- Pick Date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginVertical="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="255dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:autofillHints="Enter deadline date here"
+                android:background="@drawable/shape_input"
+                android:drawableStart="@drawable/icon_date"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/blue2"
+                android:ems="10"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="@string/date_hint"
+                android:inputType="date"
+                android:padding="10dp"
+                android:textColorHint="@color/blue2" />
+
+            <android.widget.Button
+                android:id="@+id/pickDate"
+                android:layout_width="106dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_button"
+                android:backgroundTint="@color/blue1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/pick_date"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <android.widget.Button
+                android:id="@+id/priorityBtn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_button"
+                android:backgroundTint="@color/blue3"
+                android:drawableTop="@drawable/icon_priority"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="10dp"
+                android:text="@string/priority"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <android.widget.Button
+                android:id="@+id/todoBtn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/white_button"
+                android:backgroundTint="@color/blue3"
+                android:drawableTop="@drawable/icon_todo"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="10dp"
+                android:text="@string/todo"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <android.widget.Button
+                android:id="@+id/meetingBtn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_button"
+                android:backgroundTint="@color/blue3"
+                android:drawableTop="@drawable/icon_meeting"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="10dp"
+                android:text="@string/meeting"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/your_task"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:fontFamily="@font/open_sans_bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
