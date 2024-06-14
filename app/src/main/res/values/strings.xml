@@ -66,4 +66,7 @@
     <string name="profile">Profile</string>
     <string name="progress">On Progress</string>
     <string name="deadline">Task Deadline</string>
+    <string name="ongoingtask">On Going Task</string>
+    <string name="task_pending">Pending Task</string>
+    <string name="task_done">Done Task</string>
 </resources>
