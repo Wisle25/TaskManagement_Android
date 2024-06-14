@@ -53,7 +53,7 @@ class RegisterFragment : Fragment() {
     // HTTP REQUEST REGISTER
     private fun registerUser(username: String, email: String, password: String, confirmPassword: String) {
         val request = RegisterRequest(username, email, password, confirmPassword)
-        RetrofitInstance.api.registerUser(request).enqueue(object : Callback<RegisterResponse> {
+        RetrofitInstance.userApi.registerUser(request).enqueue(object : Callback<RegisterResponse> {
             override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
                 if (response.isSuccessful && response.body()?.status == "success") {
                     Toast.makeText(requireContext(), response.body()?.message, Toast.LENGTH_SHORT).show()

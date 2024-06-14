@@ -35,37 +35,37 @@ class DetailTaskFragment : Fragment() {
 
         backButton = view.findViewById(R.id.back_button)
         titleDetailTask = view.findViewById(R.id.title_detailtask)
-        descDetailTask = view.findViewById(R.id.desc_detailtask)
-        edtName = view.findViewById(R.id.edt_name)
-        edtDescription = view.findViewById(R.id.edt_description)
-        edtDate = view.findViewById(R.id.edt_date)
-        edtTime = view.findViewById(R.id.edt_time)
-        rbPending = view.findViewById(R.id.rb_pending)
-        rbInProgress = view.findViewById(R.id.rb_inprogres)
-        rbDone = view.findViewById(R.id.rb_done)
-        btnUpdateTask = view.findViewById(R.id.btn_update_task)
-        btnDelete = view.findViewById(R.id.btn_delete)
-        btnBackToHome = view.findViewById(R.id.btn_backtohome)
+//        descDetailTask = view.findViewById(R.id.desc_detailtask)
+//        edtName = view.findViewById(R.id.edt_name)
+//        edtDescription = view.findViewById(R.id.edt_description)
+//        edtDate = view.findViewById(R.id.edt_date)
+//        edtTime = view.findViewById(R.id.edt_time)
+//        rbPending = view.findViewById(R.id.rb_pending)
+//        rbInProgress = view.findViewById(R.id.rb_inprogres)
+//        rbDone = view.findViewById(R.id.rb_done)
+//        btnUpdateTask = view.findViewById(R.id.btn_update_task)
+//        btnDelete = view.findViewById(R.id.btn_delete)
+//        btnBackToHome = view.findViewById(R.id.btn_backtohome)
 
-        backButton.setOnClickListener {
-            // Handle back button click
-            activity?.onBackPressed()
-        }
+//        backButton.setOnClickListener {
+//            // Handle back button click
+//            activity?.onBackPressed()
+//        }
 
-        btnUpdateTask.setOnClickListener {
-            // Handle update task
-            val taskName = edtName.text.toString()
-            val taskDescription = edtDescription.text.toString()
-            val taskDate = edtDate.text.toString()
-            val taskTime = edtTime.text.toString()
-            val taskStatus = when {
-                rbPending.isChecked -> "Pending"
-                rbInProgress.isChecked -> "In Progress"
-                rbDone.isChecked -> "Done"
-                else -> ""
-            }
-            // TODO: Update the task in the database or backend
-        }
+//        btnUpdateTask.setOnClickListener {
+//            // Handle update task
+//            val taskName = edtName.text.toString()
+//            val taskDescription = edtDescription.text.toString()
+//            val taskDate = edtDate.text.toString()
+//            val taskTime = edtTime.text.toString()
+//            val taskStatus = when {
+//                rbPending.isChecked -> "Pending"
+//                rbInProgress.isChecked -> "In Progress"
+//                rbDone.isChecked -> "Done"
+//                else -> ""
+//            }
+//            // TODO: Update the task in the database or backend
+//        }
 
         btnDelete.setOnClickListener {
             // Handle delete task

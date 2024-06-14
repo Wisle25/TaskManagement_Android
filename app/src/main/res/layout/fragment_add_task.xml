@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".AddTaskFragment">
@@ -35,8 +35,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -77,8 +77,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/input_priority"
-            android:layout_marginVertical="10dp">
+            android:layout_marginVertical="10dp"
+            android:hint="@string/input_priority">
 
             <AutoCompleteTextView
                 android:id="@+id/input_priority"
@@ -86,7 +86,8 @@
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/icon_priority2"
                 android:drawablePadding="10dp"
-                android:inputType="none" />
+                android:inputType="none"
+                tools:ignore="LabelFor" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -116,8 +117,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans_bold"
         android:text="@string/choosestatus"
-        android:textSize="16dp"
-        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -125,7 +125,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.638" />
 
-    <LinearLayout
+    <RadioGroup
         android:id="@+id/rb_status"
         android:layout_width="357dp"
         android:layout_height="42dp"
@@ -140,42 +140,36 @@
             android:id="@+id/rb_pending"
             android:layout_width="101dp"
             android:layout_height="wrap_content"
-            android:layout_margin="0dp"
             android:fontFamily="@font/custom_font"
             android:gravity="center"
-            android:padding="0dp"
             android:text="@string/pending" />
 
         <RadioButton
             android:id="@+id/rb_inprogres"
             android:layout_width="116dp"
             android:layout_height="wrap_content"
-            android:layout_margin="0dp"
             android:fontFamily="@font/custom_font"
             android:gravity="center"
-            android:padding="0dp"
             android:text="@string/inprogres" />
 
         <RadioButton
             android:id="@+id/rb_done"
             android:layout_width="89dp"
             android:layout_height="wrap_content"
-            android:layout_margin="0dp"
             android:fontFamily="@font/custom_font"
             android:gravity="center"
-            android:padding="0dp"
             android:text="@string/done" />
 
-    </LinearLayout>
+    </RadioGroup>
 
     <android.widget.Button
-        android:id="@+id/pickDate"
+        android:id="@+id/addTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:background="@drawable/bluegradient_button"
         android:fontFamily="@font/poppins_bold"
-        android:textSize="20dp"
         android:text="@string/add_task"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 </LinearLayout>

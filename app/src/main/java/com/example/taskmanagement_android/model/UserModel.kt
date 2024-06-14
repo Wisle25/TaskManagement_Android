@@ -21,5 +21,5 @@ data class LoginRequest(
 data class LoginResponse(
     val status: String,
     val message: String,
-    val data: String
+    val data: String?
 )

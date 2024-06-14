@@ -2,7 +2,7 @@
     <string name="app_name">TaskManagement_Android</string>
     <string name="status">Task Status</string>
     <string name="pending">Pending</string>
-    <string name="inprogres">In Progress</string>
+    <string name="inprogres">in progress</string>
     <string name="done">Done</string>
     <string name="updatetask">Update Task</string>
     <string name="delete">Delete</string>
